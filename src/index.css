@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+body {
+    font-family: "DM Mono", monospace;
+    font-style: normal;
+}
