@@ -1,73 +1,54 @@
-# React + TypeScript + Vite
+# 📊 Dashboard de Métricas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**SCADA Dashboard – Monitorização Industrial em Tempo Real**
 
-Currently, two official plugins are available:
+Este layout representa um **dashboard SCADA (Supervisory Control and Data Acquisition)** moderno, desenvolvido para **monitorização e controlo em tempo real de sistemas industriais críticos**, como plataformas de perfuração, plantas energéticas ou ambientes industriais complexos..
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O projeto também inclui um **componente reutilizável `<Separator />`** para dividir visualmente seções do dashboard.
 
-## React Compiler
+---
+## Visão Geral
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O painel centraliza informações operacionais essenciais, permitindo **tomada de decisão rápida, precisa e segura**, através de indicadores visuais claros, gráficos em tempo real e sistemas de alerta.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tecnologias Utilizadas
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- ⚛️ **React.js + TypeScript** – Biblioteca e tipagem para construção da interface.  
+- 🎨 **TailwindCSS** – Estilização responsiva e moderna.  
+- 🛠️ **Lucide Icons & Heroicons** – Ícones utilizados em cada card de métricas.  
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 📸 Capturas de Tela
+
+- **Dashboard Principal**  
+![Dashboard Principal](./assets/dashboard.png)
+
+- **Card de Métricas**  
+![Card de Métricas](./assets/card-metric.png)
+
+
+---
+
+## 🚀 Como Rodar o Projeto
+
+### 1️⃣ Pré-requisitos
+- [Node.js](https://nodejs.org/) instalado
+- Um editor de código, como [VS Code](https://code.visualstudio.com/)
+
+### 2️⃣ Clone o repositório
+```bash
+git clone https://github.com/seu-usuario/dashboard-metrics.git
+cd dashboard-metrics
+
+
+### 3️⃣ Instale as dependências
+```
+npm install
+# ou
+yarn install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
