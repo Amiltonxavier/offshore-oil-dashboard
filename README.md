@@ -25,30 +25,34 @@ O painel centraliza informações operacionais essenciais, permitindo **tomada d
 ## 📸 Capturas de Tela
 
 - **Dashboard Principal**  
-![Dashboard Principal](./assets/dashboard.png)
+![Dashboard Principal](./public/dashboard.png)
 
 - **Card de Métricas**  
-![Card de Métricas](./assets/card-metric.png)
+![Card de Métricas](./public/card-metric.png)
 
 
 ---
 
 ## 🚀 Como Rodar o Projeto
 
-### 1️⃣ Pré-requisitos
-- [Node.js](https://nodejs.org/) instalado
-- Um editor de código, como [VS Code](https://code.visualstudio.com/)
+1. **Criar o Projeto com Vite**
 
-### 2️⃣ Clone o repositório
+  Clone o repositório do GitHub para o seu computador local:
+
+   ```bash
+   git clone https://github.com/Amiltonxavier/offshore-oil-dashboard.git
+   
+   cd offshore-oil-dashboard 
+   ```
+2. Instale as dependências do projeto:
+
 ```bash
-git clone https://github.com/seu-usuario/dashboard-metrics.git
-cd dashboard-metrics
-
-
-### 3️⃣ Instale as dependências
+  npm install
 ```
-npm install
-# ou
-yarn install
+
+3. Execute a aplicação em desenvolvimento:
+
+```bash
+    npm run dev
 ```
 
